@@ -1,4 +1,10 @@
-@font-face {
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Proxima Nova';
+}@font-face {
     font-family: "Proxima Nova";
     src: url("https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot");
     src: url("https://litmus.com/fonts/Emails/proximanova-regular-webfont.eot?#iefix")
@@ -40,14 +46,16 @@
 
 }
 
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+html {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body{
     background-color: var(--background-color);
+    width:100%;
+    overflow-x: hidden;
+    border:2px solid red;
 }
 
 header {
@@ -57,13 +65,20 @@ header {
     color:var(--font-color);
 
 }
+.main-div{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+
+}
 
 .menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     height:40%;
+    /* width:100%; */
 }
 .hamburger{
     display:none;
@@ -154,6 +169,7 @@ nav ul li i{
     clear:both;
     display:table;
     z-index:2;
+    overflow-x: hidden;
 }
 .landingpage__container{
     float: left;
@@ -173,6 +189,7 @@ nav ul li i{
     font-size: 500%;
     width:100%;
     margin-left:5%;
+    height: 100%;
 }
 #title span{
     color:red;
@@ -200,12 +217,12 @@ nav ul li i{
 #button button{
     margin-right: 50px;
     padding: 10px 40px;
-    width: 32%;
+    /* width: 32%; */
     border-radius: 20px;
     box-shadow: 2px 4px 12px 0px #F14A1640;
     font-family: 'Proxima Nova';
     font-weight: 700;
-    font-size: 24px;
+    font-size: 110%;
 }
 
 #button button:first-child{
@@ -217,6 +234,7 @@ nav ul li i{
     color: red;
     border: 3px solid red;
 }
+
 #scrolling{
     display: flex;
     justify-content: center;
@@ -329,7 +347,7 @@ nav ul li i{
 .trends__content{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 
 }
 .card{
@@ -352,6 +370,7 @@ nav ul li i{
 }
 .card__description ul{
     padding-left:20px;
+    margin: 2% 0;
 }
 .card__price{
     padding-left: 20px;
@@ -768,7 +787,7 @@ footer p{
         border: 2px solid #E5E5E5;
         display: flex;
         margin: auto;
-        font-size: 200%;
+        font-size: 100%;
         padding: 2%;
         border-radius: 30px;
         background-color: white;
@@ -787,8 +806,9 @@ footer p{
     .landingpage__bottom{
         flex-direction: column-reverse;
         align-items: center;
-        width: 100%;
+        justify-content: center;
     }
+
     .landingpage__title{
         font-size:80%;
     }
@@ -799,28 +819,65 @@ footer p{
         margin:0;
         margin-bottom: 10%;
         width: 100%;
+        /* margin-left: 20%; */
+        overflow-x:scroll;
+    }
+    #button button{
+        margin-right: 2%;
+        padding: 6px 20px;  
     }
     .products__img{
         height:35%;
     }
+    /* .products__desc{
+        font-size: 20%;
+
+    } */
+    .products__name p{
+        font-size: 40%;
+    }
+    
+    .products__price{
+        font-size: 40%;
+    }
+
 
     .buy__list ul{
         flex-direction: column;
 
     }
-    .trends,.buy,.offer,.accessories,.qrcode{
+    .trends,.buy,.offer,.accessories,.qrcode, .new-arrivals{
         width:100%;
+        /* overflow-x: scroll; */
     }
+    .trends__content{
+        width: 50rem;
+        overflow-x: scroll;
+    }
+    .trends__header p{
+        font-size: 3rem;
+    }
+
     .offer{
         flex-direction: column;
+    }
+    .time, .time-desc{
+        justify-content: space-evenly;
+        margin-left: 0;
+        margin-right:0;
+        gap: 6px;
     }
     .accessories__image{
         flex-direction: column;
         align-items: center;
-        max-width:100%;
+        /* max-width:100%; */
+    }
+    .accessories__image__card{
+        width:100%;
+        margin:0;
     }
     .accessories__header p{
-        font-size: 40px;
+        font-size: 2rem;
     }
     .qrcode{
         flex-direction: column;
@@ -843,6 +900,8 @@ footer p{
     .footer__left,.footer__right{
         flex-direction: column;
         padding-left: 10%;
+        margin-top: 0;
+        width: 100%;
     }
     .footer__left__top{
         flex-direction: column;
@@ -865,7 +924,10 @@ footer p{
     }
     .footer-column{
         width: 73%;
-        margin-top: 35px;
+        /* margin-top: 35px; */
+    }
+    .footer-column ul li {
+        font-size: 1.2rem;
     }
     #newsletter input{
         padding:4%;
