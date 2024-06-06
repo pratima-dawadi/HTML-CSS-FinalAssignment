@@ -95,18 +95,17 @@ nav ul {
   list-style: none;
   flex: 1 1 auto;
   padding: 0;
+  font-family: "Proxima Nova";
 }
 nav ul li a {
   margin: 0 20px;
   text-decoration: none;
   color: var(--font-color);
-  font-family: "Proxima Nova";
 }
 nav ul li i {
   margin: 0 20px;
   text-decoration: none;
   color: var(--font-color);
-  font-family: "Proxima Nova";
 }
 
 .menu__converter button {
@@ -158,7 +157,6 @@ nav ul li i {
   display: table;
   z-index: 2;
   overflow-x: hidden;
-  font-family: "Proxima Nova";
 }
 .landingpage__container {
   float: left;
@@ -189,23 +187,19 @@ nav ul li i {
   font-size: 150%;
   width: 70%;
   margin-left: 5%;
-  /* margin-bottom: 20px; */
   margin-bottom: 5%;
   margin-top: 5%;
   color: var(--description-color);
   font-family: "Proxima Nova";
   font-style: normal;
 }
-#button {
+#button-wrap {
   display: flex;
-  /* height:80px; */
   padding-left: 45px;
-  /* padding-top: 20px; */
 }
-#button button {
+#button-wrap button {
   margin-right: 50px;
   padding: 10px 40px;
-  /* width: 32%; */
   border-radius: 20px;
   box-shadow: 2px 4px 12px 0px #f14a1640;
   font-family: "Proxima Nova";
@@ -213,11 +207,11 @@ nav ul li i {
   font-size: 110%;
 }
 
-#button button:first-child {
+#button-wrap button:first-child {
   background-color: #f14a16;
   color: white;
 }
-#button button:last-child {
+#button-wrap button:last-child {
   background-color: transparent;
   color: red;
   border: 3px solid red;
@@ -234,8 +228,14 @@ nav ul li i {
   padding-bottom: 20px;
 }
 
-button:hover {
+button:hover,
+i:hover,
+.card:hover,
+.accessories__image__card:hover,
+.scroll_img {
   cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.5s;
 }
 
 .landingpage__bottom {
@@ -250,7 +250,6 @@ button:hover {
 .headerdown__products {
   display: flex;
   justify-content: space-evenly;
-  /* margin-top: 90px; */
   margin-top: 5%;
   float: right;
   width: 70%;
@@ -340,7 +339,6 @@ button:hover {
 .trends__content {
   display: flex;
   justify-content: space-around;
-  /* margin-bottom: 30px; */
 }
 .card {
   width: 18rem;
@@ -794,20 +792,15 @@ footer p {
     margin: 0;
     margin-bottom: 10%;
     width: 100%;
-    /* margin-left: 20%; */
     overflow-x: scroll;
   }
-  #button button {
+  #button-wrap button {
     margin-right: 2%;
     padding: 6px 20px;
   }
   .products__img {
     height: 35%;
   }
-  /* .products__desc{
-        font-size: 20%;
-
-    } */
   .products__name p {
     font-size: 40%;
   }
@@ -826,7 +819,6 @@ footer p {
   .qrcode,
   .new-arrivals {
     width: 100%;
-    /* overflow-x: scroll; */
   }
   .trends__content {
     width: 50rem;
@@ -853,7 +845,6 @@ footer p {
   .accessories__image {
     flex-direction: column;
     align-items: center;
-    /* max-width:100%; */
   }
   .accessories__image__card {
     width: 100%;
@@ -908,7 +899,6 @@ footer p {
   }
   .footer-column {
     width: 73%;
-    /* margin-top: 35px; */
   }
   .footer-column ul li {
     font-size: 1.2rem;
@@ -955,7 +945,7 @@ footer p {
   #description {
     width: 80%;
   }
-  #button {
+  #button-wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
